@@ -170,7 +170,7 @@ int main(void)
         chThdSleep(chTimeMS2I(20));
     }
 #endif
-
+    
     if (try_boot) {
         jump_to_app();
     }

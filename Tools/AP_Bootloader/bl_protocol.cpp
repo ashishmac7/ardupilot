@@ -247,6 +247,7 @@ do_jump(uint32_t stacktop, uint32_t entrypoint)
 void
 jump_to_app()
 {
+    
     const uint32_t *app_base = (const uint32_t *)(APP_START_ADDRESS);
 
 #if AP_CHECK_FIRMWARE_ENABLED
