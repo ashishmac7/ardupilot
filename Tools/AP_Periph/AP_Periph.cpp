@@ -57,6 +57,7 @@ void setup(void)
 void loop(void)
 {
     periph.update();
+    
 }
 
 static uint32_t start_ms;
@@ -93,7 +94,7 @@ void AP_Periph_FW::init()
     hal.serial(0)->begin(AP_SERIALMANAGER_CONSOLE_BAUD, 32, 32);
 #endif
     hal.serial(3)->begin(115200, 128, 256);
-    hal.serial(0)->printf("Hi");
+    hal.serial(0)->printf("I_GNSS\n");
 
     load_parameters();
 
@@ -136,7 +137,7 @@ void AP_Periph_FW::init()
     if (hal.util->was_watchdog_reset()) {
         printf("Reboot after watchdog reset\n");
     }
-    hal.console->printf("Hi\n");
+    hal.console->printf("I_GNSS\n");
 #if AP_STATS_ENABLED
     node_stats.init();
 #endif
